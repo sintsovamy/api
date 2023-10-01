@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "6d0337fb-a1bf-4f4d-8198-0cffc419471c",
+		"name": "apishop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30167367"
+	},
+	"item": [
+		{
+			"name": "localhost/api/admin/products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost/api/admin/products",
+				"description": "Просмотр списка товаров"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost/api/admin/products/4",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "localhost/api/admin/products/4",
+				"description": "Удаление товара, id которого передаётся в запросе"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost/api/admin/products",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"шкаф1\",\n    \"description\": \"книжный1\",\n    \"price\": \"1101.00\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost/api/admin/products",
+				"description": "Добавление нового товара, в запросе передаётся JSON"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost/api/admin/products/19",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"комод\",\n    \"description\": \"белый\",\n    \"price\": \"115.00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost/api/admin/products/19",
+				"description": "Обновление информации о товаре"
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"marina\",\n    \"email\":\"user@shop.ru\",\n    \"password\":\"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost/api/register",
+				"description": "Регистрация с созданием токена (админа можно тоже добавить, но он только по названию будет админ, смена галочки не осилена)"
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"user@shop.ru\",\n    \"password\":\"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost/api/login",
+				"description": "Вход по токену"
+			},
+			"response": []
+		},
+		{
+			"name": "addprod",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost/api/user/cart/3",
+				"description": "Добавление продукта в корзину (реализовано не до конца, не получилось дёрнуть id у пользователя, в коде поле корзины user_id определено константой, поэтому сам запрос рабочий)"
+			},
+			"response": []
+		}
+	]
+}
